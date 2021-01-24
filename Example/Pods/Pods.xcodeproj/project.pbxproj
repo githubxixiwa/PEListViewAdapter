@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130DDF203FFADCF1DB8D0E7BA74A0EA2 /* PECollectionViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7B446A50E81FCA0706883AE36E91E3 /* PECollectionViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		295DFA5E8679B02279BC09DF56B072D8 /* UITableView+PEListViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C061FE5C4C20C9AE0F2E0EF046971D /* UITableView+PEListViewAdapter.m */; };
+		2B5813B856A05843475CC3DB2FF3A8EE /* PETableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 584F93D1F5CC371BA582565A395E7FA3 /* PETableViewAdapter.m */; };
+		5759144205345DD2FC5A0BEBF170171B /* PECommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 2242CE8DBFB378135764A62D1C0EAF62 /* PECommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		607C6BC08C4420A21EBA68528453B574 /* UICollectionView+PEListViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D2B3CD6BAD97CDEF4672AB8D7B35 /* UICollectionView+PEListViewAdapter.m */; };
+		746B93CE59FB6454A6E661F1C6A82AA6 /* PECoreFit.h in Headers */ = {isa = PBXBuildFile; fileRef = 67C155C4C169859BAEFA8B6AF5ECF0EB /* PECoreFit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AADAAA23AAB52C18E19846C5A4C9135 /* UIView+PECommonAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B24B19BE68600DABDB8ED4029A8E74 /* UIView+PECommonAdd.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		83738AC4A54C6FAD64C13194FDC966EE /* UIViewController+PEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EA434CDA98902157296AA4A1F440AF9D /* UIViewController+PEAdd.m */; };
+		865AFB9D504ED3B9710B53CB55349785 /* UIColor+PEAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A95DCC2654E66ADC8647DC315AFB3F /* UIColor+PEAdd.m */; };
+		A6E4B8B4B489C43476BDE6E3EAA9DEC0 /* UIColor+PEAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = DD35945FC6F89404F5EC588126F9B9F9 /* UIColor+PEAdd.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF890F14830A8B2ACCD74D96A1BB1457 /* PECollectionViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D695E46DFDD90FF2EFA8901164D787B5 /* PECollectionViewAdapter.m */; };
+		B336124804B76AFE04EC2212A5F61DED /* PEIPhoneX.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B14588A3724738A7ADB0B15B370F60C /* PEIPhoneX.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3BB8A38F4F11EA8B8AAEF04F53A3A33 /* UITableView+PEListViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B0B61CA01080B94737B1F33030C3D5 /* UITableView+PEListViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B7095E90EA0A4D5CD74FBA5AC55E92E0 /* UIViewController+PEAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = F5303BCC401A2082B571683432B21969 /* UIViewController+PEAdd.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C21EEC5E2B29D3F245E999F9598F10B7 /* PECommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F7DC3FEF3375735C3C654D5657DEDE /* PECommon-dummy.m */; };
+		C6D15ED3D63BAD7046AC8788061F11D1 /* PEListViewAdapter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FE7CB5E30E08790907248787B99CD3 /* PEListViewAdapter-dummy.m */; };
+		CFFAAB7B6E7CEEAFC86D2CD1D578D73F /* Pods-PEListViewAdapter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BE0065C929D8CF1AA5CAB87E55D311 /* Pods-PEListViewAdapter_Example-dummy.m */; };
+		D2268FCD850334789E6E43CD6C3472D2 /* PEListViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AFB65763A1F84D51463D548B596CB9A /* PEListViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D9B6F72F11478463AA9A0B6EABCF3B36 /* UIView+PECommonAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5EE4B99B72C48BAC7E794A7F1E8029 /* UIView+PECommonAdd.m */; };
+		DD1188AA21AC623B877983268D6FD50A /* PETableViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8B0E1B08F58CE4603F7E6A3087CFB8 /* PETableViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DDC575A852DC84C069B6BC65469F247D /* UICollectionView+PEListViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 88A5089060F2721CFFD2DCAE5041D762 /* UICollectionView+PEListViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E461196CA52C0827AF1C55F3C5D81CA8 /* PECoreFit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2D600F32D983B9ED0890989DA42D6 /* PECoreFit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15A1E5BCEBD1695151FA71AB13F60135 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 344DC4E687D1548D59E447ADC8918DE2;
+			remoteInfo = PECommon;
+		};
+		3C39D03AF0C174E09D8775A3BE61E1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F8B4ED85FD9CE5E97BDA4F61003E9C7;
+			remoteInfo = PEListViewAdapter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05D62BD3600240E0017FFE652DA8C899 /* libPECommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPECommon.a; path = libPECommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		06364625BFBF2765146C8B4E466AACE1 /* PECommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PECommon.debug.xcconfig; sourceTree = "<group>"; };
+		0FD27F8E3533ED1DAEFA30644CE6C6A8 /* PECommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PECommon.release.xcconfig; sourceTree = "<group>"; };
+		15623A3E4BECE361F90AB9E32B61961C /* libPods-PEListViewAdapter_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PEListViewAdapter_Example.a"; path = "libPods-PEListViewAdapter_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BE0065C929D8CF1AA5CAB87E55D311 /* Pods-PEListViewAdapter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PEListViewAdapter_Example-dummy.m"; sourceTree = "<group>"; };
+		2242CE8DBFB378135764A62D1C0EAF62 /* PECommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PECommon.h; path = PECommon/Classes/PECommon.h; sourceTree = "<group>"; };
+		28C5F0D01ACE72FC39F22A8141C5738A /* PEListViewAdapter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PEListViewAdapter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2CC0374C739DAE823719718E958C4B59 /* Pods-PEListViewAdapter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PEListViewAdapter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		31C061FE5C4C20C9AE0F2E0EF046971D /* UITableView+PEListViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+PEListViewAdapter.m"; path = "PEListViewAdapter/Classes/UITableView+PEListViewAdapter.m"; sourceTree = "<group>"; };
+		3A759623244F8198BB5CCF919EBC99A6 /* PEListViewAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PEListViewAdapter.debug.xcconfig; sourceTree = "<group>"; };
+		3D5EE4B99B72C48BAC7E794A7F1E8029 /* UIView+PECommonAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PECommonAdd.m"; path = "PECommon/Classes/UIView+PECommonAdd.m"; sourceTree = "<group>"; };
+		433E1A279C6E7F6016881E287461CD78 /* Pods-PEListViewAdapter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PEListViewAdapter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		584F93D1F5CC371BA582565A395E7FA3 /* PETableViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PETableViewAdapter.m; path = PEListViewAdapter/Classes/PETableViewAdapter.m; sourceTree = "<group>"; };
+		67C155C4C169859BAEFA8B6AF5ECF0EB /* PECoreFit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PECoreFit.h; path = PECommon/Classes/PECoreFit.h; sourceTree = "<group>"; };
+		71B0B61CA01080B94737B1F33030C3D5 /* UITableView+PEListViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+PEListViewAdapter.h"; path = "PEListViewAdapter/Classes/UITableView+PEListViewAdapter.h"; sourceTree = "<group>"; };
+		72CBFB0A7DAF91A4D1AD0F396331D8A8 /* PEListViewAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PEListViewAdapter.release.xcconfig; sourceTree = "<group>"; };
+		87B24B19BE68600DABDB8ED4029A8E74 /* UIView+PECommonAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PECommonAdd.h"; path = "PECommon/Classes/UIView+PECommonAdd.h"; sourceTree = "<group>"; };
+		88A5089060F2721CFFD2DCAE5041D762 /* UICollectionView+PEListViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+PEListViewAdapter.h"; path = "PEListViewAdapter/Classes/UICollectionView+PEListViewAdapter.h"; sourceTree = "<group>"; };
+		8AFB65763A1F84D51463D548B596CB9A /* PEListViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEListViewAdapter.h; path = PEListViewAdapter/Classes/PEListViewAdapter.h; sourceTree = "<group>"; };
+		9B14588A3724738A7ADB0B15B370F60C /* PEIPhoneX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEIPhoneX.h; path = PECommon/Classes/PEIPhoneX.h; sourceTree = "<group>"; };
+		9CF9D2B3CD6BAD97CDEF4672AB8D7B35 /* UICollectionView+PEListViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+PEListViewAdapter.m"; path = "PEListViewAdapter/Classes/UICollectionView+PEListViewAdapter.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FC2D600F32D983B9ED0890989DA42D6 /* PECoreFit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PECoreFit.m; path = PECommon/Classes/PECoreFit.m; sourceTree = "<group>"; };
+		9FD52EF44764593B5F77108D6E4CD7C3 /* PEListViewAdapter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEListViewAdapter-prefix.pch"; sourceTree = "<group>"; };
+		A0A95DCC2654E66ADC8647DC315AFB3F /* UIColor+PEAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PEAdd.m"; path = "PECommon/Classes/UIColor+PEAdd.m"; sourceTree = "<group>"; };
+		AC7B446A50E81FCA0706883AE36E91E3 /* PECollectionViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PECollectionViewAdapter.h; path = PEListViewAdapter/Classes/PECollectionViewAdapter.h; sourceTree = "<group>"; };
+		C3F7DC3FEF3375735C3C654D5657DEDE /* PECommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PECommon-dummy.m"; sourceTree = "<group>"; };
+		CE8342C03A761C16A9366E91FA3BE7D5 /* libPEListViewAdapter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPEListViewAdapter.a; path = libPEListViewAdapter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D250BA8EE30EF7D720CC06ED419D5DC2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D695E46DFDD90FF2EFA8901164D787B5 /* PECollectionViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PECollectionViewAdapter.m; path = PEListViewAdapter/Classes/PECollectionViewAdapter.m; sourceTree = "<group>"; };
+		D716431A18C48A7B472546017C2F24AF /* Pods-PEListViewAdapter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PEListViewAdapter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D82BD81EC37BA23AD6948F84BEE56F93 /* PECommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PECommon-prefix.pch"; sourceTree = "<group>"; };
+		DB8B0E1B08F58CE4603F7E6A3087CFB8 /* PETableViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PETableViewAdapter.h; path = PEListViewAdapter/Classes/PETableViewAdapter.h; sourceTree = "<group>"; };
+		DD35945FC6F89404F5EC588126F9B9F9 /* UIColor+PEAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PEAdd.h"; path = "PECommon/Classes/UIColor+PEAdd.h"; sourceTree = "<group>"; };
+		EA434CDA98902157296AA4A1F440AF9D /* UIViewController+PEAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PEAdd.m"; path = "PECommon/Classes/UIViewController+PEAdd.m"; sourceTree = "<group>"; };
+		EB7C92755268B4BC3088C71249D8B10E /* Pods-PEListViewAdapter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PEListViewAdapter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EFBA99F99C25AD686D5DDFEABE3F6F5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F5303BCC401A2082B571683432B21969 /* UIViewController+PEAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PEAdd.h"; path = "PECommon/Classes/UIViewController+PEAdd.h"; sourceTree = "<group>"; };
+		F9FE7CB5E30E08790907248787B99CD3 /* PEListViewAdapter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEListViewAdapter-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53180159CB3D557EB2863ECEC9B084AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD970CBB269A024847401603FA931511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47766D9C6D0DCDE72B8C13360ECE042 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0645FD5337D4D7671DAA5E230F721E6B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9FE7CB5E30E08790907248787B99CD3 /* PEListViewAdapter-dummy.m */,
+				9FD52EF44764593B5F77108D6E4CD7C3 /* PEListViewAdapter-prefix.pch */,
+				3A759623244F8198BB5CCF919EBC99A6 /* PEListViewAdapter.debug.xcconfig */,
+				72CBFB0A7DAF91A4D1AD0F396331D8A8 /* PEListViewAdapter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PEListViewAdapter";
+			sourceTree = "<group>";
+		};
+		38B08B0BAF6720180ACAB247BB50DD50 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3F7DC3FEF3375735C3C654D5657DEDE /* PECommon-dummy.m */,
+				D82BD81EC37BA23AD6948F84BEE56F93 /* PECommon-prefix.pch */,
+				06364625BFBF2765146C8B4E466AACE1 /* PECommon.debug.xcconfig */,
+				0FD27F8E3533ED1DAEFA30644CE6C6A8 /* PECommon.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PECommon";
+			sourceTree = "<group>";
+		};
+		6439CEB2AC1DCDF9BCA5DAFDDAE41872 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B70B305C0DA01576ED0040FFF41C85F9 /* Pods-PEListViewAdapter_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A140169E2A525AE14F8C24E47D34A5DD /* PECommon */ = {
+			isa = PBXGroup;
+			children = (
+				2242CE8DBFB378135764A62D1C0EAF62 /* PECommon.h */,
+				67C155C4C169859BAEFA8B6AF5ECF0EB /* PECoreFit.h */,
+				9FC2D600F32D983B9ED0890989DA42D6 /* PECoreFit.m */,
+				9B14588A3724738A7ADB0B15B370F60C /* PEIPhoneX.h */,
+				DD35945FC6F89404F5EC588126F9B9F9 /* UIColor+PEAdd.h */,
+				A0A95DCC2654E66ADC8647DC315AFB3F /* UIColor+PEAdd.m */,
+				87B24B19BE68600DABDB8ED4029A8E74 /* UIView+PECommonAdd.h */,
+				3D5EE4B99B72C48BAC7E794A7F1E8029 /* UIView+PECommonAdd.m */,
+				F5303BCC401A2082B571683432B21969 /* UIViewController+PEAdd.h */,
+				EA434CDA98902157296AA4A1F440AF9D /* UIViewController+PEAdd.m */,
+				38B08B0BAF6720180ACAB247BB50DD50 /* Support Files */,
+			);
+			name = PECommon;
+			path = PECommon;
+			sourceTree = "<group>";
+		};
+		B70B305C0DA01576ED0040FFF41C85F9 /* Pods-PEListViewAdapter_Example */ = {
+			isa = PBXGroup;
+			children = (
+				EB7C92755268B4BC3088C71249D8B10E /* Pods-PEListViewAdapter_Example-acknowledgements.markdown */,
+				D716431A18C48A7B472546017C2F24AF /* Pods-PEListViewAdapter_Example-acknowledgements.plist */,
+				17BE0065C929D8CF1AA5CAB87E55D311 /* Pods-PEListViewAdapter_Example-dummy.m */,
+				433E1A279C6E7F6016881E287461CD78 /* Pods-PEListViewAdapter_Example.debug.xcconfig */,
+				2CC0374C739DAE823719718E958C4B59 /* Pods-PEListViewAdapter_Example.release.xcconfig */,
+			);
+			name = "Pods-PEListViewAdapter_Example";
+			path = "Target Support Files/Pods-PEListViewAdapter_Example";
+			sourceTree = "<group>";
+		};
+		C46CDF1416B37AC8A9DA2B9E20FB87E9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EFBA99F99C25AD686D5DDFEABE3F6F5E /* LICENSE */,
+				28C5F0D01ACE72FC39F22A8141C5738A /* PEListViewAdapter.podspec */,
+				D250BA8EE30EF7D720CC06ED419D5DC2 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C5EDB5ABB6B910A43C08EF7B39E9E45F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A140169E2A525AE14F8C24E47D34A5DD /* PECommon */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E4DFF9247C139CDF7A7B1C46E6EE2E64 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				C5EDB5ABB6B910A43C08EF7B39E9E45F /* Pods */,
+				D791B5C02BBACE9F68564CDDFACDA886 /* Products */,
+				6439CEB2AC1DCDF9BCA5DAFDDAE41872 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D3CFDD16E336DD725F59E77EBDB99940 /* PEListViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				AC7B446A50E81FCA0706883AE36E91E3 /* PECollectionViewAdapter.h */,
+				D695E46DFDD90FF2EFA8901164D787B5 /* PECollectionViewAdapter.m */,
+				8AFB65763A1F84D51463D548B596CB9A /* PEListViewAdapter.h */,
+				DB8B0E1B08F58CE4603F7E6A3087CFB8 /* PETableViewAdapter.h */,
+				584F93D1F5CC371BA582565A395E7FA3 /* PETableViewAdapter.m */,
+				88A5089060F2721CFFD2DCAE5041D762 /* UICollectionView+PEListViewAdapter.h */,
+				9CF9D2B3CD6BAD97CDEF4672AB8D7B35 /* UICollectionView+PEListViewAdapter.m */,
+				71B0B61CA01080B94737B1F33030C3D5 /* UITableView+PEListViewAdapter.h */,
+				31C061FE5C4C20C9AE0F2E0EF046971D /* UITableView+PEListViewAdapter.m */,
+				C46CDF1416B37AC8A9DA2B9E20FB87E9 /* Pod */,
+				0645FD5337D4D7671DAA5E230F721E6B /* Support Files */,
+			);
+			name = PEListViewAdapter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D791B5C02BBACE9F68564CDDFACDA886 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05D62BD3600240E0017FFE652DA8C899 /* libPECommon.a */,
+				CE8342C03A761C16A9366E91FA3BE7D5 /* libPEListViewAdapter.a */,
+				15623A3E4BECE361F90AB9E32B61961C /* libPods-PEListViewAdapter_Example.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4DFF9247C139CDF7A7B1C46E6EE2E64 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3CFDD16E336DD725F59E77EBDB99940 /* PEListViewAdapter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8F274A563488AD0F5918C2DFE8BF1234 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5759144205345DD2FC5A0BEBF170171B /* PECommon.h in Headers */,
+				746B93CE59FB6454A6E661F1C6A82AA6 /* PECoreFit.h in Headers */,
+				B336124804B76AFE04EC2212A5F61DED /* PEIPhoneX.h in Headers */,
+				A6E4B8B4B489C43476BDE6E3EAA9DEC0 /* UIColor+PEAdd.h in Headers */,
+				7AADAAA23AAB52C18E19846C5A4C9135 /* UIView+PECommonAdd.h in Headers */,
+				B7095E90EA0A4D5CD74FBA5AC55E92E0 /* UIViewController+PEAdd.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5907ECD46B812E0E7467CF4726BC9BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130DDF203FFADCF1DB8D0E7BA74A0EA2 /* PECollectionViewAdapter.h in Headers */,
+				D2268FCD850334789E6E43CD6C3472D2 /* PEListViewAdapter.h in Headers */,
+				DD1188AA21AC623B877983268D6FD50A /* PETableViewAdapter.h in Headers */,
+				DDC575A852DC84C069B6BC65469F247D /* UICollectionView+PEListViewAdapter.h in Headers */,
+				B3BB8A38F4F11EA8B8AAEF04F53A3A33 /* UITableView+PEListViewAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E6E92B129B194083BD951C7C5F0E31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F8B4ED85FD9CE5E97BDA4F61003E9C7 /* PEListViewAdapter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D069AD58500DC151F9A5BCDAA2CCFD7 /* Build configuration list for PBXNativeTarget "PEListViewAdapter" */;
+			buildPhases = (
+				C5907ECD46B812E0E7467CF4726BC9BA /* Headers */,
+				7C54FDC81296CDBE68ECFC3E41532339 /* Sources */,
+				D47766D9C6D0DCDE72B8C13360ECE042 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PEListViewAdapter;
+			productName = PEListViewAdapter;
+			productReference = CE8342C03A761C16A9366E91FA3BE7D5 /* libPEListViewAdapter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		344DC4E687D1548D59E447ADC8918DE2 /* PECommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAAA4C5D66779DB48803775BAD16AF5E /* Build configuration list for PBXNativeTarget "PECommon" */;
+			buildPhases = (
+				8F274A563488AD0F5918C2DFE8BF1234 /* Headers */,
+				C0299D30188837EE7A94C213EC88C661 /* Sources */,
+				CD970CBB269A024847401603FA931511 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PECommon;
+			productName = PECommon;
+			productReference = 05D62BD3600240E0017FFE652DA8C899 /* libPECommon.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F92E1D27E0E7952CE1482EC9C082ADF /* Pods-PEListViewAdapter_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 501564082269D250DA1CF1637DB9F7B9 /* Build configuration list for PBXNativeTarget "Pods-PEListViewAdapter_Example" */;
+			buildPhases = (
+				D0E6E92B129B194083BD951C7C5F0E31 /* Headers */,
+				676D19DE185DCCC14AACB382D4648CB7 /* Sources */,
+				53180159CB3D557EB2863ECEC9B084AA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7415D26E5BA30781D5DB843DAD1DC07A /* PBXTargetDependency */,
+				BD031DFB19F6D4B26F756BEB41A455E6 /* PBXTargetDependency */,
+			);
+			name = "Pods-PEListViewAdapter_Example";
+			productName = "Pods-PEListViewAdapter_Example";
+			productReference = 15623A3E4BECE361F90AB9E32B61961C /* libPods-PEListViewAdapter_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D791B5C02BBACE9F68564CDDFACDA886 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				344DC4E687D1548D59E447ADC8918DE2 /* PECommon */,
+				0F8B4ED85FD9CE5E97BDA4F61003E9C7 /* PEListViewAdapter */,
+				8F92E1D27E0E7952CE1482EC9C082ADF /* Pods-PEListViewAdapter_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		676D19DE185DCCC14AACB382D4648CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFAAB7B6E7CEEAFC86D2CD1D578D73F /* Pods-PEListViewAdapter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C54FDC81296CDBE68ECFC3E41532339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF890F14830A8B2ACCD74D96A1BB1457 /* PECollectionViewAdapter.m in Sources */,
+				C6D15ED3D63BAD7046AC8788061F11D1 /* PEListViewAdapter-dummy.m in Sources */,
+				2B5813B856A05843475CC3DB2FF3A8EE /* PETableViewAdapter.m in Sources */,
+				607C6BC08C4420A21EBA68528453B574 /* UICollectionView+PEListViewAdapter.m in Sources */,
+				295DFA5E8679B02279BC09DF56B072D8 /* UITableView+PEListViewAdapter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0299D30188837EE7A94C213EC88C661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21EEC5E2B29D3F245E999F9598F10B7 /* PECommon-dummy.m in Sources */,
+				E461196CA52C0827AF1C55F3C5D81CA8 /* PECoreFit.m in Sources */,
+				865AFB9D504ED3B9710B53CB55349785 /* UIColor+PEAdd.m in Sources */,
+				D9B6F72F11478463AA9A0B6EABCF3B36 /* UIView+PECommonAdd.m in Sources */,
+				83738AC4A54C6FAD64C13194FDC966EE /* UIViewController+PEAdd.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7415D26E5BA30781D5DB843DAD1DC07A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PECommon;
+			target = 344DC4E687D1548D59E447ADC8918DE2 /* PECommon */;
+			targetProxy = 15A1E5BCEBD1695151FA71AB13F60135 /* PBXContainerItemProxy */;
+		};
+		BD031DFB19F6D4B26F756BEB41A455E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PEListViewAdapter;
+			target = 0F8B4ED85FD9CE5E97BDA4F61003E9C7 /* PEListViewAdapter */;
+			targetProxy = 3C39D03AF0C174E09D8775A3BE61E1ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		028C79C54D66EDA83A5A919772A8451D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A759623244F8198BB5CCF919EBC99A6 /* PEListViewAdapter.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PEListViewAdapter/PEListViewAdapter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PEListViewAdapter;
+				PRODUCT_NAME = PEListViewAdapter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		896B336EBD2FBB7619C8FC3AC3676F3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC0374C739DAE823719718E958C4B59 /* Pods-PEListViewAdapter_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90E6DE81A39DA2AC14AAFBDCED9F0F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FD27F8E3533ED1DAEFA30644CE6C6A8 /* PECommon.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PECommon/PECommon-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PECommon;
+				PRODUCT_NAME = PECommon;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94B182E6C6486533723E17C4FD5BC302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CBFB0A7DAF91A4D1AD0F396331D8A8 /* PEListViewAdapter.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PEListViewAdapter/PEListViewAdapter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PEListViewAdapter;
+				PRODUCT_NAME = PEListViewAdapter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E1E7684C2DCF0B50C4C99B0339091F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06364625BFBF2765146C8B4E466AACE1 /* PECommon.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PECommon/PECommon-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PECommon;
+				PRODUCT_NAME = PECommon;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FED17EEEC2B7B2941956F97B7986CBC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433E1A279C6E7F6016881E287461CD78 /* Pods-PEListViewAdapter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D069AD58500DC151F9A5BCDAA2CCFD7 /* Build configuration list for PBXNativeTarget "PEListViewAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028C79C54D66EDA83A5A919772A8451D /* Debug */,
+				94B182E6C6486533723E17C4FD5BC302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		501564082269D250DA1CF1637DB9F7B9 /* Build configuration list for PBXNativeTarget "Pods-PEListViewAdapter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED17EEEC2B7B2941956F97B7986CBC3 /* Debug */,
+				896B336EBD2FBB7619C8FC3AC3676F3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAAA4C5D66779DB48803775BAD16AF5E /* Build configuration list for PBXNativeTarget "PECommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E7684C2DCF0B50C4C99B0339091F55 /* Debug */,
+				90E6DE81A39DA2AC14AAFBDCED9F0F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,23 @@
+PODS:
+  - PECommon (1.0.0)
+  - PEListViewAdapter (1.0.0)
+
+DEPENDENCIES:
+  - PECommon
+  - PEListViewAdapter (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - PECommon
+
+EXTERNAL SOURCES:
+  PEListViewAdapter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PECommon: b282dce45646ff0d10240fa8f0badbcb986053e9
+  PEListViewAdapter: 08f9d081c57bf7d37bccd53c579fdb48a4b6e6af
+
+PODFILE CHECKSUM: 0cd66d901455dcd1f5ced2d67a16e7765e26ddfc
+
+COCOAPODS: 1.10.1

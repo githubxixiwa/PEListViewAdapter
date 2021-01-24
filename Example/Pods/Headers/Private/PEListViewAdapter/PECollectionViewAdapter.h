@@ -1,0 +1,1 @@
+../../../../../PEListViewAdapter/Classes/PECollectionViewAdapter.h
