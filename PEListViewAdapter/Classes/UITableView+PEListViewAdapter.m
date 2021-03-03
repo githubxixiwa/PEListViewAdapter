@@ -43,7 +43,7 @@ static char adapterKey;
 
 #pragma mark - publice
 /// 关联一个适配器
-- (void)registerAdapter:(PETableViewAdapter *)adapter {
+- (void)registerAdapter:(PETableViewAutoLayoutAdapter *)adapter {
     objc_setAssociatedObject(self, &adapterKey, adapter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     self.delegate = adapter;
     self.dataSource = adapter;
@@ -63,7 +63,7 @@ static char adapterKey;
 }
 
 #pragma mark - get set
-- (PETableViewAdapter *)adapter {
+- (PETableViewAutoLayoutAdapter *)adapter {
     return objc_getAssociatedObject(self, &adapterKey);
 }
 

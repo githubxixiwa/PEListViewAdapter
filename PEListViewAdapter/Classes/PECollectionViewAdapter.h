@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否显示空页面回调
 @property(nonatomic, copy) UIView * ((^emptyViewBlock)(UICollectionView *collectionView, UIView *oldEmptyView));
 
+#pragma mark - UIScrollView回调
+/// 正在滚动
+@property(nonatomic, copy) void ((^didScrollBlock)(UITableView *tableView));
 @end
 
 NS_ASSUME_NONNULL_END

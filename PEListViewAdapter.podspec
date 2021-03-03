@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PEListViewAdapter'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = '使用适配器模式实现的便捷的UICollectionView和UITableView的代理,简化代码,提高代码紧凑性和可读性'
 
   s.homepage         = 'https://www.jianshu.com/u/50c12381f32c'

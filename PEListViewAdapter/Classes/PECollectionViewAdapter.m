@@ -73,4 +73,9 @@
         self.didSelectRowBlock(collectionView, indexPath);
     }
 }
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    !self.didScrollBlock ?: self.didScrollBlock(scrollView);
+}
 @end

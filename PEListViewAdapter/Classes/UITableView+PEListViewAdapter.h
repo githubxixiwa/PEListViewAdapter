@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableView (PEListViewAdapter)
 /// 适配器
-@property(nonatomic, strong, readonly) PETableViewAdapter *adapter;
+@property(nonatomic, strong, readonly) PETableViewAutoLayoutAdapter *adapter;
 
 /// 默认样式
 + (instancetype)tableView;
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)tableViewWithFrame:(CGRect)frame sytle:(UITableViewStyle)style cellClasses:(NSArray *)cellClasses;
 
 /// 关联一个适配器
-- (void)registerAdapter:(PETableViewAdapter *)adapter;
+- (void)registerAdapter:(PETableViewAutoLayoutAdapter *)adapter;
 
 /// 刷新界面
 - (void)reloadDataWithIsHasMore:(BOOL)isHaveMore;
