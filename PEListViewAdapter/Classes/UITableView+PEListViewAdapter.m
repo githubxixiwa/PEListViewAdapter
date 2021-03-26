@@ -8,9 +8,7 @@
 #import "UITableView+PEListViewAdapter.h"
 #import <objc/runtime.h>
 
-#if __has_include(<MJRefresh.h>)
 #import "MJRefresh.h"
-#endif
 
 static char adapterKey;
 @implementation UITableView (PEListViewAdapter)
@@ -52,14 +50,12 @@ static char adapterKey;
 
 /// 刷新界面
 - (void)reloadDataWithIsHasMore:(BOOL)isHaveMore {
-#if __has_include(<MJRefresh.h>)
     if (isHaveMore) {
         [self.mj_footer endRefreshing];
     } else {
         [self.mj_footer endRefreshingWithNoMoreData];
     }
     [self reloadData];
-#endif
 }
 
 #pragma mark - get set
