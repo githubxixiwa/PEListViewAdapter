@@ -6,6 +6,7 @@
 //
 
 #import "PETableViewAutoLayoutAdapter.h"
+#import "MJRefresh.h"
 
 @interface PETableViewAutoLayoutAdapter()
 /// 显示空提示的view
@@ -28,16 +29,22 @@
         count = self.rowNumBlock(tableView, section);
     }
     if (count == 0 && self.emptyViewBlock) {
-        if (self.emptyView) {
-            [self.emptyView removeFromSuperview];
+        if (!self.emptyView) {
+            self.emptyView = self.emptyViewBlock(tableView, self.emptyView);
+            if (self.emptyView) {
+                [self.tableView addSubview:self.emptyView];
+            }
+        } else {
+            self.emptyView.hidden = NO;
         }
-        self.emptyView = self.emptyViewBlock(tableView, self.emptyView);
-        if (self.emptyView) {
-            [self.tableView addSubview:self.emptyView];
-            self.emptyView.frame = self.tableView.bounds;
+        CGRect frame = self.tableView.bounds;
+        frame.origin.y = self.tableView.contentInset.top;
+        if (self.tableView.mj_header) {
+            frame.origin.y = self.tableView.mj_header.scrollViewOriginalInset.top;
         }
+        self.emptyView.frame = frame;
     } else {
-        [self.emptyView removeFromSuperview];
+        self.emptyView.hidden = YES;
     }
     return count;
 }
@@ -59,6 +66,6 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    !self.didScrollBlock ?: self.didScrollBlock(scrollView);
+    !self.didScrollBlock ?: self.didScrollBlock((UITableView *)scrollView);
 }
 @end
