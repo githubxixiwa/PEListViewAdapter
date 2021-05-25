@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PETableViewAdapter.h"
+#import "PETableViewAutoLayoutAdapter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

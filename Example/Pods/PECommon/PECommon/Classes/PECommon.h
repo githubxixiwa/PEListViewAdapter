@@ -10,9 +10,9 @@
 
 #import "PECoreFit.h"
 #import "PEIPhoneX.h"
-#import "UIColor+PEAdd.h"
+#import "UIColor+PECommonAdd.h"
 #import "UIView+PECommonAdd.h"
-#import "UIViewController+PEAdd.h"
+#import "UIViewController+PECommonAdd.h"
 
 #pragma mark - 屏幕尺寸相关
 #ifndef kScreenWidth

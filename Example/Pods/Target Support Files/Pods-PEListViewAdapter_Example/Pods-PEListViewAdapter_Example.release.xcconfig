@@ -1,8 +1,8 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/PECommon" "${PODS_ROOT}/Headers/Public/PEListViewAdapter"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/PECommon" "${PODS_CONFIGURATION_BUILD_DIR}/PEListViewAdapter"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"PECommon" -l"PEListViewAdapter"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MJRefresh" "${PODS_ROOT}/Headers/Public/PECommon" "${PODS_ROOT}/Headers/Public/PEListViewAdapter"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh" "${PODS_CONFIGURATION_BUILD_DIR}/PECommon" "${PODS_CONFIGURATION_BUILD_DIR}/PEListViewAdapter"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"MJRefresh" -l"PECommon" -l"PEListViewAdapter"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

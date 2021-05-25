@@ -34,7 +34,7 @@
         _tableView = [UITableView tableViewWithFrame:CGRectMake(0, PEIPhoneXNavHeight, kScreenWidth, kScreenHeight - PEIPhoneXNavHeight) sytle:UITableViewStylePlain cellClasses:@[UITableViewCell.class]];
 
         // 创建一个适配器
-        PETableViewAdapter *adapter = [PETableViewAdapter new];
+        PETableViewAutoLayoutAdapter *adapter = [PETableViewAutoLayoutAdapter new];
         PEWeakify(self)
         [adapter setRowNumBlock:^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
             PEStrongify(self)
