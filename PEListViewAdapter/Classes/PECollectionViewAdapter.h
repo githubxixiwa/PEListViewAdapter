@@ -9,17 +9,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PECollectionViewAdapter : NSObject<UICollectionViewDelegate, UICollectionViewDataSource>
-/// tableView
+@interface PECollectionViewAdapter : NSObject<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+/// 是否显示空页面,默认不显示
+@property(nonatomic, assign) BOOL isShowEmptyView;
+/// 空页面
+@property(nonatomic, strong) UIView *emptyView;
+
+/// collectionView
 @property(nonatomic, weak) UICollectionView *collectionView;
 /// 返回多少个section
 @property(nonatomic, copy) NSInteger ((^sectionNumBlock)(UICollectionView *collectionView));
-/// 返回多少个section
+/// 返回多少个row
 @property(nonatomic, copy) NSInteger ((^rowNumBlock)(UICollectionView *collectionView, NSInteger section));
 /// 配置cell
+@property(nonatomic, copy) CGSize ((^cellSizeForRowBlock)(UICollectionView *collectionView, NSIndexPath *indexPath));
+/// 配置cell
 @property(nonatomic, copy) UICollectionViewCell * ((^cellForRowBlock)(UICollectionView *collectionView, NSIndexPath *indexPath));
-/// 配置高度
-@property(nonatomic, copy) CGFloat ((^heightForRowBlock)(UICollectionView *collectionView, NSIndexPath *indexPath));
 /// 点击cell回调
 @property(nonatomic, copy) void ((^didSelectRowBlock)(UICollectionView *collectionView, NSIndexPath *indexPath));
 
@@ -29,9 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) CGSize ((^sectionFooterSizeBlock)(UICollectionView *collectionView, NSInteger section));
 /// 组头组尾回调
 @property(nonatomic, copy) UICollectionReusableView * ((^viewForSupplementaryElementOfKindBlock)(UICollectionView *collectionView, NSString *kind, NSIndexPath *indexPath));
-
-/// 是否显示空页面回调
-@property(nonatomic, copy) UIView * ((^emptyViewBlock)(UICollectionView *collectionView, UIView *oldEmptyView));
 
 #pragma mark - UIScrollView回调
 /// 正在滚动

@@ -10,21 +10,25 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PETableViewAutoLayoutAdapter : NSObject<UITableViewDelegate, UITableViewDataSource>
+/// 是否显示空页面,默认不显示
+@property(nonatomic, assign) BOOL isShowEmptyView;
+/// 空页面
+@property(nonatomic, strong) UIView *emptyView;
+
 /// tableView
 @property(nonatomic, weak) UITableView *tableView;
 /// 返回多少个section
 @property(nonatomic, copy) NSInteger ((^sectionNumBlock)(UITableView *tableView));
 /// 返回多少个section
 @property(nonatomic, copy) NSInteger ((^rowNumBlock)(UITableView *tableView, NSInteger section));
+/// 模糊的配置高度
+@property(nonatomic, copy) CGFloat ((^estimatedHeightForRowBlock)(UITableView *tableView, NSIndexPath *indexPath));
 /// 配置高度
 @property(nonatomic, copy) CGFloat ((^heightForRowBlock)(UITableView *tableView, NSIndexPath *indexPath));
 /// 配置cell
 @property(nonatomic, copy) UITableViewCell * ((^cellForRowBlock)(UITableView *tableView, NSIndexPath *indexPath));
 /// 点击cell回调
 @property(nonatomic, copy) void ((^didSelectRowBlock)(UITableView *tableView, NSIndexPath *indexPath));
-
-/// 是否显示空页面回调
-@property(nonatomic, copy) UIView * ((^emptyViewBlock)(UITableView *tableView, UIView *oldEmptyView));
 
 #pragma mark - section header or footer
 /// header高度

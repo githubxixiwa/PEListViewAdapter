@@ -35,6 +35,9 @@ static char adapterKey;
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    if (@available(iOS 15.0, *)) {
+        self.sectionHeaderTopPadding = 0;
+    }
 }
 
 #pragma mark - private
@@ -46,16 +49,6 @@ static char adapterKey;
     self.delegate = adapter;
     self.dataSource = adapter;
     adapter.tableView = self;
-}
-
-/// 刷新界面
-- (void)reloadDataWithIsHasMore:(BOOL)isHaveMore {
-    if (isHaveMore) {
-        [self.mj_footer endRefreshing];
-    } else {
-        [self.mj_footer endRefreshingWithNoMoreData];
-    }
-    [self reloadData];
 }
 
 #pragma mark - get set

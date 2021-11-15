@@ -12,16 +12,28 @@
 
 static char adapterKey;
 @implementation UICollectionView (PEListViewAdapter)
++ (instancetype)collectionViewWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layout {
+    UICollectionView *collectionView = [[self alloc] initWithFrame:frame collectionViewLayout:layout];
+    collectionView.showsVerticalScrollIndicator = NO;
+    collectionView.showsHorizontalScrollIndicator = NO;
+    [collectionView setupView];
+    return collectionView;
+}
+
+/// 快速构建PECollectionView
++ (instancetype)collectionViewWithLayout:(UICollectionViewLayout *)layout {
+    return [self collectionViewWithFrame:CGRectZero layout:layout];
+}
+
 /// 快速构建UICollectionView
 /// @param frame frame
 /// @param layout layout
 /// @param cellClasses 需要注册的cell类 , identifier 为 NSStringFromClass(cellClass)
 + (instancetype)collectionViewWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layout cellClasses:(NSArray *)cellClasses {
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+    UICollectionView *collectionView = [self collectionViewWithFrame:frame layout:layout];
     for (Class cellClass in cellClasses) {
         [collectionView registerClass:cellClass forCellWithReuseIdentifier:NSStringFromClass(cellClass)];
     }
-    [collectionView setupView];
     return collectionView;
 }
 

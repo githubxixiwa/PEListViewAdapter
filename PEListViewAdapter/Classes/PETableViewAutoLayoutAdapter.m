@@ -9,26 +9,21 @@
 #import "MJRefresh.h"
 
 @interface PETableViewAutoLayoutAdapter()
-/// 显示空提示的view
-@property(nonatomic, strong) UIView *emptyView;
 @end
 
 @implementation PETableViewAutoLayoutAdapter
 
-- (void)updateEmptyTableView:(UITableView *)tableView count:(NSInteger)count {
-    if (count == 0 && self.emptyViewBlock) {
-        if (!self.emptyView) {
-            self.emptyView = self.emptyViewBlock(tableView, self.emptyView);
-            if (self.emptyView) {
-                [self.tableView addSubview:self.emptyView];
-            }
-        } else {
-            self.emptyView.hidden = NO;
-        }
-        CGRect frame = self.tableView.bounds;
-        frame.origin.y = self.tableView.contentInset.top;
-        if (self.tableView.mj_header) {
-            frame.origin.y = self.tableView.mj_header.scrollViewOriginalInset.top;
+- (void)updateEmptyView:(UITableView *)tableView count:(NSInteger)count {
+    if (!self.isShowEmptyView) {
+        return;
+    }
+    if (count == 0 && self.emptyView) {
+        self.emptyView.hidden = NO;
+        [tableView addSubview:self.emptyView];
+        CGRect frame = tableView.bounds;
+        frame.origin.y = tableView.contentInset.top;
+        if (tableView.mj_header) {
+            frame.origin.y = tableView.mj_header.scrollViewOriginalInset.top;
         }
         self.emptyView.frame = frame;
     } else {
@@ -39,7 +34,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.sectionNumBlock) {
         NSInteger count = self.sectionNumBlock(tableView);
-        [self updateEmptyTableView:tableView count:count];
+        [self updateEmptyView:tableView count:count];
         return count;
     }
     return 1;
@@ -51,22 +46,40 @@
         count = self.rowNumBlock(tableView, section);
     }
     if (!self.sectionNumBlock) {
-        [self updateEmptyTableView:tableView count:count];
+        [self updateEmptyView:tableView count:count];
     }
     
     return count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.estimatedHeightForRowBlock) {
+        return self.estimatedHeightForRowBlock(tableView, indexPath);
+    }
+    return UITableViewAutomaticDimension;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.heightForRowBlock) {
         return self.heightForRowBlock(tableView, indexPath);
     }
+    if (tableView.rowHeight > 0) {
+        return tableView.rowHeight;
+    }
     return UITableViewAutomaticDimension;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.cellForRowBlock) {
-        return self.cellForRowBlock(tableView, indexPath);
+        @try {
+            UITableViewCell *cell = self.cellForRowBlock(tableView, indexPath);
+            return cell;
+        } @catch (NSException *exception) {
+            
+        } @finally {
+            
+        }
+        
     }
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"unkownCellID"];
 }

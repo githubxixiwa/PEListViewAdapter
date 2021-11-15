@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param cellClasses 需要注册的cell类 , identifier 为 NSStringFromClass(cellClass)
 + (instancetype)collectionViewWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layout cellClasses:(NSArray *)cellClasses;
 
+/// 快速构建PECollectionView
++ (instancetype)collectionViewWithLayout:(UICollectionViewLayout *)layout;
++ (instancetype)collectionViewWithFrame:(CGRect)frame layout:(UICollectionViewLayout *)layout;
+
 /// 关联一个适配器
 - (void)registerAdapter:(PECollectionViewAdapter *)adapter;
 

@@ -22,9 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 关联一个适配器
 - (void)registerAdapter:(PETableViewAutoLayoutAdapter *)adapter;
-
-/// 刷新界面
-- (void)reloadDataWithIsHasMore:(BOOL)isHaveMore;
 @end
 
 NS_ASSUME_NONNULL_END

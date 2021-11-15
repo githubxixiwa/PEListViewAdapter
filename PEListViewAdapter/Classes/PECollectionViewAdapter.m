@@ -6,16 +6,46 @@
 //
 
 #import "PECollectionViewAdapter.h"
+#import "MJRefresh.h"
 
 @interface PECollectionViewAdapter ()
-/// 空view
-@property(nonatomic, strong) UIView *emptyView;
 @end
 
 @implementation PECollectionViewAdapter
+- (void)updateEmptyView:(UICollectionView *)collectionView count:(NSInteger)count {
+    if (!self.isShowEmptyView) {
+        return;
+    }
+    if (count == 0 && self.emptyView) {
+        self.emptyView.hidden = NO;
+        [collectionView addSubview:self.emptyView];
+        CGRect frame = collectionView.bounds;
+        frame.origin.y = collectionView.contentInset.top;
+        if (collectionView.mj_header) {
+            frame.origin.y = collectionView.mj_header.scrollViewOriginalInset.top;
+        }
+        self.emptyView.frame = frame;
+    } else {
+        self.emptyView.hidden = YES;
+    }
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.cellSizeForRowBlock) {
+        return self.cellSizeForRowBlock(collectionView, indexPath);
+    }
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)collectionView.collectionViewLayout;
+    if ([layout isKindOfClass:UICollectionViewFlowLayout.class] && !CGSizeEqualToSize(layout.itemSize, CGSizeZero)) {
+        return CGSizeMake(layout.itemSize.width, layout.itemSize.height);
+    }
+    return CGSizeZero;
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     if (self.sectionNumBlock) {
-        return self.sectionNumBlock(collectionView);
+        NSInteger count = self.sectionNumBlock(collectionView);
+        [self updateEmptyView:collectionView count:count];
+        return count;
     }
     return 1;
 }
@@ -25,26 +55,22 @@
     if (self.rowNumBlock) {
         count = self.rowNumBlock(collectionView, section);
     }
-    if (count == 0 && self.emptyViewBlock) {
-        if (self.emptyView) {
-            [self.emptyView removeFromSuperview];
-        }
-        self.emptyView = self.emptyViewBlock(collectionView, self.emptyView);
-        if (self.emptyView) {
-            [self.collectionView addSubview:self.emptyView];
-            self.emptyView.frame = self.collectionView.bounds;
-        }
-    } else {
-        [self.emptyView removeFromSuperview];
+    if (!self.sectionNumBlock) {
+        [self updateEmptyView:collectionView count:count];
     }
     return count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (self.cellForRowBlock) {
-        return self.cellForRowBlock(collectionView, indexPath);
+        @try {
+            UICollectionViewCell *cell = self.cellForRowBlock(collectionView, indexPath);
+            return cell;
+        } @catch (NSException *exception) {
+        } @finally {
+        }
     }
-    return nil;
+    return [[UICollectionViewCell alloc] initWithFrame:CGRectZero];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -76,6 +102,6 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    !self.didScrollBlock ?: self.didScrollBlock(scrollView);
+    !self.didScrollBlock ?: self.didScrollBlock((UICollectionView *)scrollView);
 }
 @end
