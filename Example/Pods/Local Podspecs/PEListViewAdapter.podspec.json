@@ -15,7 +15,7 @@
     "tag": "1.0.1"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "source_files": "PEListViewAdapter/Classes/**/*",
   "dependencies": {

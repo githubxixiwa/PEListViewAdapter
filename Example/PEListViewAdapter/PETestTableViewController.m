@@ -7,7 +7,7 @@
 //
 
 #import "PETestTableViewController.h"
-#import "UITableView+PEListViewAdapter.h"
+#import "PEListViewAdapter.h"
 #import "PECommon.h"
 
 @interface PETestTableViewController ()
@@ -42,7 +42,8 @@
         }];
         [adapter setCellForRowBlock:^UITableViewCell *(UITableView * _Nonnull tableView, NSIndexPath *indexPath) {
             PEStrongify(self)
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
+//            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
+            UITableViewCell *cell = [UITableViewCell dequeueReusableCellWithTableView:tableView];
             cell.textLabel.text = self.dataArray[indexPath.row];
             return cell;
         }];

@@ -7,7 +7,7 @@
 //
 
 #import "PETestCollectionViewController.h"
-#import "UICollectionView+PEListViewAdapter.h"
+#import "PEListViewAdapter.h"
 #import "PECommon.h"
 
 @interface PETestCollectionViewController ()
@@ -52,7 +52,8 @@
         }];
         [adapter setCellForRowBlock:^UICollectionViewCell *(UICollectionView *collectionView, NSIndexPath *indexPath) {
             PEStrongify(self)
-            UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(UICollectionViewCell.class) forIndexPath:indexPath];
+//            UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(UICollectionViewCell.class) forIndexPath:indexPath];
+            UICollectionViewCell *cell = [UICollectionViewCell dequeueReusableCellWithCollectionView:collectionView indexPath:indexPath];
             UILabel *label = [cell viewWithTag:23524];
             if (!label) {
                 label = [UILabel new];
