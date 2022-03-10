@@ -11,6 +11,5 @@
 #import "UITableView+PEListViewAdapter.h"
 #import "UITableViewCell+PEListViewAdapter.h"
 #import "UICollectionView+PEListViewAdapter.h"
-#import "UICollectionViewCell+PEListViewAdapter.h"
 
 #endif /* PEListViewAdapter_h */

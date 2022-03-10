@@ -1,17 +1,14 @@
 PODS:
   - MJRefresh (3.5.0)
-  - PECommon (1.0.1)
-  - PEListViewAdapter (1.0.1):
+  - PEListViewAdapter (1.0.2):
     - MJRefresh
 
 DEPENDENCIES:
-  - PECommon
   - PEListViewAdapter (from `../`)
 
 SPEC REPOS:
   trunk:
     - MJRefresh
-    - PECommon
 
 EXTERNAL SOURCES:
   PEListViewAdapter:
@@ -19,9 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  PECommon: 5eca6ba8cffa15f6e16f8bd95f4bf480376c901f
-  PEListViewAdapter: 69cb14d17d423f587a417dc8cfb26c95e90c3d04
+  PEListViewAdapter: f47bd1d9c1f61bbc76baf22ccd20ee05d74d5c8e
 
-PODFILE CHECKSUM: 0cd66d901455dcd1f5ced2d67a16e7765e26ddfc
+PODFILE CHECKSUM: 46eff43aa17b3c8bce0ee91b42b78b06ddf76d6b
 
 COCOAPODS: 1.11.2

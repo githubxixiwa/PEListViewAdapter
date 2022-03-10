@@ -67,6 +67,21 @@ static char adapterKey;
     [self reloadData];
 }
 
+- (UICollectionViewCell *)dequeueReusableCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath {
+    NSString *identifier = NSStringFromClass(cellClass);
+    UICollectionViewCell *cell;
+    @try {
+        cell = [self dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    } @catch (NSException *exception) {
+        [self registerClass:cellClass forCellWithReuseIdentifier:identifier];
+        cell = [self dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    }
+    if (!cell) {
+        cell = [[cellClass alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+    }
+    return cell;
+}
+
 #pragma mark - get set
 - (PECollectionViewAdapter *)adapter {
     return objc_getAssociatedObject(self, &adapterKey);

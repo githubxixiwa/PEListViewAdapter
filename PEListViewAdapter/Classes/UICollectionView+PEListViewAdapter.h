@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 刷新界面
 - (void)reloadDataWithIsHasMore:(BOOL)isHaveMore;
+
+- (UICollectionViewCell *)dequeueReusableCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,7 +8,6 @@
 
 #import "PETestTableViewController.h"
 #import "PEListViewAdapter.h"
-#import "PECommon.h"
 
 @interface PETestTableViewController ()
 /// tableView
@@ -31,24 +30,21 @@
 #pragma mark - lazyLoad
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [UITableView tableViewWithFrame:CGRectMake(0, PEIPhoneXNavHeight, kScreenWidth, kScreenHeight - PEIPhoneXNavHeight) sytle:UITableViewStylePlain cellClasses:@[UITableViewCell.class]];
+        _tableView = [UITableView tableViewWithFrame:self.view.bounds sytle:UITableViewStylePlain cellClasses:@[UITableViewCell.class]];
 
         // 创建一个适配器
         PETableViewAutoLayoutAdapter *adapter = [PETableViewAutoLayoutAdapter new];
-        PEWeakify(self)
+        __weak typeof(self) weakSelf = self;
         [adapter setRowNumBlock:^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
-            PEStrongify(self)
-            return self.dataArray.count;
+            return weakSelf.dataArray.count;
         }];
         [adapter setCellForRowBlock:^UITableViewCell *(UITableView * _Nonnull tableView, NSIndexPath *indexPath) {
-            PEStrongify(self)
-//            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
             UITableViewCell *cell = [UITableViewCell dequeueReusableCellWithTableView:tableView];
-            cell.textLabel.text = self.dataArray[indexPath.row];
+            cell.textLabel.text = weakSelf.dataArray[indexPath.row];
             return cell;
         }];
         [adapter setHeightForRowBlock:^CGFloat(UITableView * _Nonnull tableView, NSIndexPath *indexPath) {
-            return PEFitSize(70);
+            return 70;
         }];
         [adapter setDidSelectRowBlock:^(UITableView * _Nonnull tableView, NSIndexPath *indexPath) {
             NSLog(@"点击了 %@", self.dataArray[indexPath.row]);

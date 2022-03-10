@@ -8,7 +8,6 @@
 
 #import "PETestCollectionViewController.h"
 #import "PEListViewAdapter.h"
-#import "PECommon.h"
 
 @interface PETestCollectionViewController ()
 /// tableView
@@ -31,29 +30,26 @@
 #pragma mark - lazyLoad
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        CGFloat spacing = PEFitSize(16);
+        CGFloat spacing = 16;
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemSize = CGSizeMake(PEFitSize(108), PEFitSize(108));
-        layout.minimumInteritemSpacing = PEFitSize(9);
-        layout.minimumLineSpacing = PEFitSize(9);
+        layout.itemSize = CGSizeMake(108, 108);
+        layout.minimumInteritemSpacing = 9;
+        layout.minimumLineSpacing = 9;
         layout.sectionInset = UIEdgeInsetsMake(spacing, spacing, spacing, spacing);
         
-        _collectionView = [UICollectionView collectionViewWithFrame:CGRectMake(0, PEIPhoneXNavHeight, kScreenWidth, kScreenHeight - PEIPhoneXNavHeight) layout:layout cellClasses:@[UICollectionViewCell.class]];
+        _collectionView = [UICollectionView collectionViewWithFrame:self.view.bounds layout:layout cellClasses:@[UICollectionViewCell.class]];
         
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerID"];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerID"];
         
         PECollectionViewAdapter *adapter = [PECollectionViewAdapter new];
-        PEWeakify(self)
+        __weak typeof(self) weakSelf = self;
         [adapter setRowNumBlock:^NSInteger(UICollectionView *collectionView, NSInteger section) {
-            PEStrongify(self)
-            return self.dataArray.count;
+            return weakSelf.dataArray.count;
         }];
         [adapter setCellForRowBlock:^UICollectionViewCell *(UICollectionView *collectionView, NSIndexPath *indexPath) {
-            PEStrongify(self)
-//            UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(UICollectionViewCell.class) forIndexPath:indexPath];
-            UICollectionViewCell *cell = [UICollectionViewCell dequeueReusableCellWithCollectionView:collectionView indexPath:indexPath];
+            UICollectionViewCell *cell = [collectionView dequeueReusableCell:UICollectionViewCell.class indexPath:indexPath];
             UILabel *label = [cell viewWithTag:23524];
             if (!label) {
                 label = [UILabel new];
@@ -64,20 +60,19 @@
             }
             label.frame = cell.bounds;
             label.text = self.dataArray[indexPath.row];
-            label.backgroundColor = PERandomColor;
+            label.backgroundColor = UIColor.whiteColor;
             return cell;
         }];
         [adapter setDidSelectRowBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath) {
             NSLog(@"点击了 %@", self.dataArray[indexPath.row]);
         }];
         [adapter setSectionHeaderSizeBlock:^CGSize(UICollectionView *collectionView, NSInteger section) {
-            return CGSizeMake(kScreenWidth, 100);
+            return CGSizeMake(weakSelf.view.bounds.size.width, 100);
         }];
         [adapter setSectionFooterSizeBlock:^CGSize(UICollectionView *collectionView, NSInteger section) {
-            return CGSizeMake(kScreenWidth, 200);
+            return CGSizeMake(weakSelf.view.bounds.size.width, 200);
         }];
         [adapter setViewForSupplementaryElementOfKindBlock:^UICollectionReusableView *(UICollectionView *collectionView, NSString *kind, NSIndexPath *indexPath) {
-            PEStrongify(self)
             UICollectionReusableView *reusableView = nil;
             if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
                 reusableView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerID" forIndexPath:indexPath];
